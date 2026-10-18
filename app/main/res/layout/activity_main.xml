@@ -1,0 +1,318 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen"
+    android:fillViewport="true"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="26dp"
+        android:paddingBottom="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="28dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAYFLOW"
+                    android:textColor="#38D1B9"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.22"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Earnings overview"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:background="@drawable/bg_card"
+                android:text="P"
+                android:textColor="#38D1B9"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TOTAL EARNINGS"
+                android:textColor="#9EC2C5"
+                android:textSize="12sp"
+                android:letterSpacing="0.12" />
+
+            <TextView
+                android:id="@+id/totalOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textColor="#FFFFFF"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular pay + overtime"
+                android:textColor="#38D1B9"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate your pay"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter your work details below"
+            android:textColor="#8EA4B5"
+            android:textSize="13sp"
+            android:layout_marginBottom="22dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOURS WORKED"
+            android:textColor="#B6C8D4"
+            android:textSize="12sp"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/hoursInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_input"
+            android:hint="Enter hours worked"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#7E97A6"
+            android:textSize="16sp"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOURLY RATE ($)"
+            android:textColor="#B6C8D4"
+            android:textSize="12sp"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/rateInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_input"
+            android:hint="Enter hourly rate"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#7E97A6"
+            android:textSize="16sp"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TAX RATE (%)"
+            android:textColor="#B6C8D4"
+            android:textSize="12sp"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/taxInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_input"
+            android:hint="Enter tax percentage"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#7E97A6"
+            android:textSize="16sp"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/bg_primary_button"
+            android:backgroundTint="@null"
+            android:text="CALCULATE PAY"
+            android:textColor="#0C1927"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:stateListAnimator="@null" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment breakdown"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="22dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regular pay"
+                    android:textColor="#B6C8D4"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/payOutput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="22dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Overtime pay"
+                    android:textColor="#B6C8D4"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/overtimeOutput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#36505F"
+                android:layout_marginBottom="22dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Calculated tax"
+                    android:textColor="#B6C8D4"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/taxOutput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textColor="#38D1B9"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="ABOUT PAYFLOW"
+            android:textColor="#38D1B9"
+            android:textSize="13sp"
+            android:backgroundTint="#203747"
+            android:layout_marginTop="26dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="COMP3074  â€¢  ASSIGNMENT 1"
+            android:textColor="#718A9A"
+            android:textSize="11sp"
+            android:letterSpacing="0.12"
+            android:gravity="center"
+            android:layout_marginTop="22dp" />
+
+    </LinearLayout>
+
+</ScrollView>
